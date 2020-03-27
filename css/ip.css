@@ -1,0 +1,43 @@
+.phoneBody {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25%;
+}
+.phoneBtns {
+  position: absolute;
+  align-self: center;
+}
+.appleIcon {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+#phone {
+  height: 90%;
+  width: auto;
+  position: absolute;
+  align-self: center;
+  bottom: 0;
+}
+.phonetext {
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: "#212529";
+}
+.customClickable {
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+.emulateTextHover {
+  cursor: pointer;
+  color: #8e8e8e;
+  transition: all 0.2s ease;
+}
+.phonetext i {
+  font-size: 54px;
+}
+.ip-text {
+  margin-bottom: 0;
+}
+.feature-iconbar {
+  margin: 0 auto;
+}

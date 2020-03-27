@@ -1,27 +1,55 @@
 /*This is where all fucking CSS is going to go*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500");
-
-.carousel-item {
-  max-height: 400px;
-  position: relative;
-  
+.customClickable:hover {
+  cursor: pointer;
+  color: #8e8e8e;
+  transition: all 0.2s ease 0s;
+}
+.responsive {
+  width: 100%;
+  height: auto;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+  background-color: white;
+  color: #212529;
 }
-/*Hero Button CSS*/
-.btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-  font-size: 18px;
-  font-family: "Montserrat";
+html {
+  overflow-x: hidden;
 }
+/* Footer */
+.footer-small {
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  text-align: left;
+}
+footer {
+  background-color: #212529;
+  color: white;
+  position: relative;
+  padding-bottom: 2%;
+}
+footer a {
+  color: white;
+}
+a {
+  color: #8e8e8e;
+}
+a:not([href]) {
+  color: #8e8e8e;
+  cursor: pointer;
+}
+.pltBadge {
+  height: 40px;
+}
+/*Hero*/
 .hero {
-  background: url("../img/hero-image.jpg");
   background-size: cover;
   background-position: center bottom;
   height: 100%;
@@ -35,34 +63,43 @@ body {
   position: relative;
 }
 .hero > h1 {
-  color: #fff;
-  margin-top: -30px;
   font-size: 50px;
 }
+#title-icon {
+  border-radius: 15%;
+}
+#title-icon-container {
+  padding-bottom: 3%;
+}
+#title-description {
+  font-weight: 500;
+  margin: 2%;
+}
+.seeMore {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 7%;
+}
+.seeMore:hover {
+  cursor: pointer;
+  color: #8e8e8e;
+  transition: all 0.2s ease 0s;
+}
+/*Don't show slider on PC*/
+.pc-dev-slider {
+  display: none;
+}
+
 .text-center {
   text-align: center;
 }
 .featuretext {
   font-family: "Montserrat";
   text-align: center;
-  margin-top: 140px;
-  margin-bottom: 130px;
+  padding-top: 130px;
+  padding-bottom: 40px;
 }
-.phonetext {
-  font-family: "Montserrat";
-  font-weight: 500;
-}
-.contact {
-  font-size: 30px;
-  border-left: 80px;
-  border-top: 30px;
-}
-.contact-text {
-  position: relative;
-  top: 20px;
-  left: -30px;
-}
-/*NavBar CSS (Oh boy this is a long one*/
 .custom-navigation {
   background: transparent;
   height: 70px;
@@ -71,34 +108,24 @@ body {
   z-index: 1;
   font-family: "Montserrat";
   font-weight: 500;
-  color: #edf0f1;
 }
 .custom-navigation li a {
   transition: all 0.3s ease 0s;
-  color: #edf0f1;
   text-decoration: none;
 }
-
 .custom-navigation li a:hover {
-  color: #0088a9;
-}
-
-.custom-navigation #logo {
-  color: #fff;
-  padding: 20px 0 0 25px;
+  color: #8e8e8e;
 }
 .custom-navigation #links {
   list-style: none;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 20px 25px 0 0;
+  padding-top: 20px;
   font-size: large;
+  cursor: pointer;
 }
 .custom-navigation #links,
 #logo #navtext {
   display: inline-block;
+  padding-left: 0;
 }
 .custom-navigation #navtext {
   padding-left: 10px;
@@ -108,86 +135,154 @@ body {
 }
 .custom-navigation #links > li {
   display: inline-block;
-  padding-right: 15px;
+  padding: 10px;
 }
-/*Mobil Navbar*/
-.custom-navigation > #links.visible {
-  background: rgba(0, 0, 0, 0.7);
-  /*Ezt valaki fejtse meg nekem hogz mi a faszomert nem fullscreen*/
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* Contact */
+.contact {
+  padding-bottom: 40px;
 }
 /*Footer iconbar*/
-.bottom-iconbar{
+.bottom-iconbar {
   text-align: center;
   align-items: center;
   position: relative;
   padding-left: 15px;
   padding-right: 15px;
+  margin: auto;
 }
-.pc-dev-container-footer{
+.pc-dev-container-footer {
   width: 50%;
   padding-top: 30px;
 }
-#hamburger,#close{
-  display: none
+#hamburger,
+#close {
+  display: none;
 }
 
-/*Icon resizerer*/
-.pc-icon{
-  font-size: 80px;
+/*Icon resizer*/
+.pc-icon {
+  font-size: 54px;
 }
 
-
-/*Media Querries*/
-@media(max-width:767px) {
-  .sm-dev-padding{
+#img-code {
+  height: 500px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  display: block;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.img-code-textbox {
+  height: 33.33%;
+}
+.software-textbox {
+  text-align: justify;
+  line-height: 22px;
+}
+/*Media Queries*/
+@media (max-width: 767px) {
+  .sm-dev-padding {
     padding-top: 80px;
   }
-  .sm-dev-contact, .contact-text
-  {
+  .sm-dev-contact,
+  .contact-text {
     font-size: 22px;
   }
-  .sm-dev-icon{
+  .sm-dev-icon {
     font-size: 50px;
     position: relative;
     top: 10px;
   }
-  /*Footer scaling for mobile*/
-  .sm-dev-container-footer{
-    width: 100%;
-    padding-top: 30px;;
+  /*Show slider on Mobile*/
+  .sm-dev-slider {
+    display: inline;
   }
-  .contact-text{
+  /*Don't show interactive phone on moble*/
+  .sm-dev-featuretextDisable {
+    display: none;
+  }
+
+  /*Footer scaling for mobile*/
+  .sm-dev-container-footer {
+    width: 100%;
+    padding-top: 0px;
+    text-align: center;
+    align-items: center;
+  }
+  .sm-dev-contact-text {
+    padding-top: 10px;
+  }
+  .contact-text {
     position: relative;
-    left: 30px;
-    top: 5px;   
+    left: 10px;
+    top: 10px;
+  }
+  .software-textbox {
+    text-align: center;
+    line-height: 22px;
   }
 
   /*Modile Navbar*/
-  #hamburger,  #close{
-    color: #fff;
-    position: absolute;
-    top: 0;
+  #hamburger,
+  #close {
+    position: fixed;
+    top: 10px;
     right: 0;
     padding: 20px 25px;
-    z-index: 99;   
+    z-index: 99;
   }
-  #hamburger{
+  #hamburger {
     display: inline;
   }
-  #close{
+  #img-code,
+  #close,
+  #img-left,
+  #img-right {
     display: none;
   }
-  .custom-navigation > #links {
-    display: none;
-    padding: 0;
-    height: 100%;
+  .sm-first-feature-padding {
+    padding-top: 20px;
   }
-  
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-small {
+    position: relative;
+    float: right;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    text-align: left;
+  }
+}
+
+/* Main background color styling */
+/* #ffff72 */
+.solid-container {
+  background: white;
+}
+#img-left {
+  width: 45%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+}
+#img-right {
+  width: 45%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
 }

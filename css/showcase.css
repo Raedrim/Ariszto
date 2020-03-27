@@ -1,0 +1,24 @@
+#showcasePhone {
+  height: 612.5;
+  width: 305px;
+  padding-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.showcaseRow {
+  height: 612.5;
+}
+.showcaseTextContainer {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 20%;
+  max-width: 240px;
+}
+
+@media (max-width: 767px) {
+  #showcase {
+    display: none;
+  }
+}

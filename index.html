@@ -1,10 +1,16 @@
-<!doctype html>
+<!-- <!doctype html> -->
 <html lang="en">
 
+
+
 <head>
-  <!-- Required meta tags -->
+  <!-- Meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="Egy nem hivatalos KRÉTA kliens, amit azért írtam, mert a hivatalos használhatatlan.">
+  <meta name="keywords" content="kréta,e-napló,arisztokréta,kreta,arisztokreta,e-naplo">
+  <meta name="author" content="3niXboi">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,9 +18,12 @@
 
   <!--Custom Spreadsheet-->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ip.css">
+  <link rel="stylesheet" href="css/showcase.css">
 
-  <!--Font Awesome-->
-  <script src="https://kit.fontawesome.com/a6d91ed2fc.js" crossorigin="anonymous"></script>
+
+  <!--AOS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <title>Arisztokréta</title>
   <link rel="icon" href='img/favicon.ico' type="image/x-icon">
@@ -23,184 +32,359 @@
 <body>
   <!--NavBar-->
 
-  <nav class="custom-navigation">
-    <div id="logo">
-      <img src='img/iTunesArtwork@2x.png' width="30" height="30" class="d-inline-block align-top" alt="">
-      <div id="navtext">Arisztokréta</div>
-    </div>
-    <!--Mobile Icons-->
-      <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i>
-      <i id="close" class="fa fa-times" aria-hidden="true"></i>    
+  <nav data-aos="fade" class="custom-navigation text-center">
     <ul id="links">
-      <li><a href="#home-page">Kezdőlap</a></li>
-      <li><a href="#functions">Funkciók</a></li>
-      <li><a href="#contacts">Elérhetőség</a></li>
+      <li><a onclick="scrl('functions')">Funkciók</a></li>
+      <li><a onclick="scrl('software');">Szoftver</a></li>
+      <li><a onclick="scrl('contacts');">Elérhetőség</a></li>
     </ul>
   </nav>
   <!--Hero-->
-  <span id="home-page">
-  <div class="hero title">
-    <h1>Arisztokréta</h1>
-    <button type="button" class="btn btn-primary">Tudj meg többet!</button>
+  <div class="hero-container">
+    <img data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="100" id="img-left"
+      src="img/left.png">
+    <img data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="100"
+      data-aos="fade-left" id="img-right" src="img/right.png">
+    <div class="hero">
+      <div id="title-icon-container">
+        <img id="title-icon" src="img/favicon.ico" alt="">
+      </div>
+      <h1>Arisztokréta</h1>
+      <div>
+        <a href="https://apps.apple.com/us/app/arisztokr%C3%A9ta-e-napl%C3%B3/id1502626784?mt=8">
+          <img class="pltBadge"
+            src="https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2020-03-25&kind=iossoftware&bubble=ios_apps" />
+        </a>
+        <a
+          href='https://play.google.com/store/apps/details?id=hu.coware.ellenorzo&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+          <img class="pltBadge" alt='Get it on Google Play' src="img/play-badge.png" />
+        </a>
+      </div>
+      <p id="title-description">Egy nem hivatalos KRÉTA kliens, <br> amit azért írtam, mert a hivatalos használhatatlan.
+      </p>
+      <div onclick="scrl('functions')" class="seeMore">
+        <span>Tudj meg többet</span>
+        <br>
+        <i class="fas fa-chevron-down fa-2x"></i>
+      </div>
+    </div>
   </div>
-</span>
   <!--Feature List-->
-  <span id="functions">
-  <div #title class="featuretext functions">
-    <h1>Miért válaszd az Arisztokrétát?</h1>
-  </div>
-</span>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">             
-              <img class="d-block" src="https://picsum.photos/1080/1920" alt="First slide">
-             
-            </div>
-            <div class="carousel-item">
-              <img class="d-block" src="https://picsum.photos/1080/1920" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block" src="https://picsum.photos/1080/1920" alt="Third slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+  <div class="solid-container">
+    <span id="functions">
+      <div data-aos="fade-up">
+        <div class="featuretext functions" style="padding-top: 40px;">
+          <h1>Miért válaszd az Arisztokrétát?</h1>
         </div>
       </div>
-    </div>
-  </div> 
-  
-  <div class="container" style="padding-top: 70px;">
-    <div class="row text-center">
-      <div class="col-md-4 sm-dev-padding">
-        <i class="fa fa-tachometer-alt fa-5x"></i>
-        <h2>Gyors</h2>
-        <h4>Insert joke about why kreta is shit</h4>
-      </div>
-      <div class="col-md-4 sm-dev-padding">
-        <i class="fa fa-user-cog fa-5x"></i>
-        <h2>Személyre szabható</h2>
-        <h4>Lorem ipsum dolor sit amet consectetur</h4>
-      </div>
-      <div class="col-md-4 sm-dev-padding">
-        <i class="fa fa-school fa-5x"></i>
-        <h2>Diákok készítették</h2>
-        <h4>Lorem ipsum dolor sit amet consectetur</h4>
-      </div>
-    </div>
-  </div>
-  <!--im gonna hate making this sho much-->
-  <div #functions class="featuretext">
-    <h1>Próbáld ki , mit is értünk mi személyre szabhatóság alattt!</h1>
-  </div>
-
-
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-lg-6">
-        <div class="phonetext">
-          <li>
-            Lorem ipsum dolor sit amet consectetur
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet consectetur
-          </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <h1 >TELEFON HELYE</h1>
-      </div>
-    </div>
-  </div>
-<span id="contacts">
-  <div class="featuretext" style="margin-bottom: 70px;">
-    <h1>Ötletem/kérdésem van hova küldjem?</h1>
-  </div>
-</span>
-  <div class="contact sm-dev-contact">
+    </span>
     <div class="container">
-
-      <div class="row">
-        <div class="col-2">
-          <i class="fas fa-envelope sm-dev-icon pc-icon"></i>
-        </div>
-
-        <div class="col-10">
-          <div class="contact-text">
-            Küldj egy emailt erre a címre: <a href="cowareapps@gmail.com">cowareapps@gmail.com</a>
+      <div class="row text-center">
+        <div class="col-md sm-dev-padding sm-first-feature-padding">
+          <div data-aos="fade-up">
+            <i class="fa fa-tachometer-alt fa-5x"></i>
+            <h3>Gyors</h3>
+            <p>Nem tart percekig amíg betölt. A lassú, használhatatlan e-naplók kora lejárt.</p>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-2">
-          <i class="fab fa-github sm-dev-icon pc-icon"></i>
+        <div class="col-md sm-dev-padding">
+          <div data-aos="fade-up">
+            <i class="fa fa-user-cog fa-5x"></i>
+            <h3>Személyre szabható</h3>
+            <p>Válassz saját hátteret, témát vagy színeket.</p>
+          </div>
         </div>
-        <div class="col-10">
-          <div class="contact-text">
-            Nyiss egy issue-t <a href="https://github.com/Coware-Apps/ellenorzo/issues">GitHub-on</a>
+        <div class="col-md sm-dev-padding">
+          <div data-aos="fade-up">
+            <i class="fa fa-mobile fa-5x"></i>
+            <h3>KRÉTA-kompatibilis</h3>
+            <p>Az iskolád által használt rendszer. Gyorsabban. Megbízhatóbban.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
- <footer class="footer">
-  <div class="asd">
-    <div class="container pc-dev-container-footer sm-dev-container-footer">
-      <div class="row">
-        <div class="col-3">
-          <a href="https://play.google.com/store/apps/details?id=hu.coware.ellenorzo">          
-            <i class="fab fa-google-play fa-2x"></i>
-         </a>
+  <div class="solid-container" style="padding-top: 65px; padding-bottom: 65px;">
+    <div id="showcase" class="container">
+      <div class="d-flex justify-content-center showcaseRow">
+        <div class="p-2 bd-highlight">
+          <div class="showcaseTextContainer"></div>
+          <div data-aos="fade-right" style="text-align: right" class="showcaseTextContainer">
+            <h3><strong>Részletes</strong></h3>
+            <span>Kövesd eredményeidet pontosan</span>
+          </div>
+          <div class="showcaseTextContainer"></div>
+          <div data-aos="fade-right" style="text-align: right" class="showcaseTextContainer">
+            <h3><strong>Hatékony</strong></h3>
+            <span>Mindennapi, gyors használatra optimalzálva</span>
+          </div>
+          <div class="showcaseTextContainer"></div>
         </div>
-        <div class="col-3">
-          <i class="fab fa-app-store-ios fa-2x"></i>
+        <div id="phoneDiv" class="p-2 bd-highlight">
+          <img class="responsive" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="750"
+            id="showcasePhone" src="img/ios/showcase-black.png" alt="iPhone-11-pro-max">
         </div>
-        <div class="col-3">
-          <i class="fab fa-discord fa-2x"></i>
+        <div class="p-2 bd-highlight">
+          <div data-aos="fade-left" class="showcaseTextContainer">
+            <h3><strong>Átlátható</strong></h3>
+            <span>Könnyen kezelhető, gyors felület</span>
+          </div>
+          <div class="showcaseTextContainer"></div>
+          <div data-aos="fade-left" class="showcaseTextContainer">
+            <h3><strong>Pehelykönnyű</strong></h3>
+            <span>Az alkalmazás Androidon csupán 8MB</span>
+          </div>
+          <div class="showcaseTextContainer"></div>
+          <div data-aos="fade-left" class="showcaseTextContainer">
+            <h3><strong>Mi lenne, ha?</strong></h3>
+            <span>Kiváncsi vagy hányasra állnál egy rossz vagy jó jegy után?</span>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="solid-container">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md sm-dev-padding">
+          <div data-aos="fade-up">
+            <i class="fa fa-school fa-5x"></i>
+            <h3>Diákok készítették</h3>
+            <p>Az alkalmazást a felhasználóik fejlesztik a saját, és a közösség igénye alapján.</p>
+          </div>
+        </div>
+        <div class="col-md sm-dev-padding">
+          <div data-aos="fade-up">
+            <i class="fa fa-chart-pie fa-5x"></i>
+            <h3>Sokoldalú</h3>
+            <p>Az alkalmazás tele van új funkciókkal, grafikonokkal és részletes statisztikákkal.</p>
+          </div>
+        </div>
+        <div class="col-md sm-dev-padding">
+          <div data-aos="fade-up">
+            <i class="fa fa-github fa-5x"></i>
+            <h3>Nyílt forráskódú</h3>
+            <p>A forráskódot bárki, bármikor megtekintheti és ellenőrizheti.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sm-dev-featuretextDisable solid-container">
+    <div data-aos="fade-up" class="featuretext">
+      <h1>Próbáld ki, mit is értünk mi személyre szabhatóság alatt!</h1>
+    </div>
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-6">
+          <div class="phonetext">
+            <div class="container text-left">
+              <div data-aos="fade-right">
+
+                <div id="phonetext_customizeable" class="row customClickable"
+                  onclick="setImageVisibleJQERY('customizeable')">
+                  <div class="col-3 feature-iconbar container d-flex">
+                    <!-- ICON -->
+                    <i class="fas fa-cogs fa-fw align-self-center"></i>
+                  </div>
+                  <div class="col-9 featureBar-padding">
+                    <!-- feature -->
+                    <h3><strong>Felület.</strong></h3>
+                    <p class="ip-text">Választhatsz sötét illetve világos témák között, továbbá saját hátteret is
+                      beállíthatsz.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-right">
+                <div id="phonetext_customColors" class="row customClickable"
+                  onclick="setImageVisibleJQERY('customColors')">
+                  <div class="col-3 feature-iconbar container d-flex">
+                    <i class="fas fa-palette fa-fw align-self-center"></i>
+                  </div>
+                  <div class="col-9 featureBar-padding">
+                    <h3><strong>Színek.</strong></h3>
+                    <p class="ip-text">
+                      Színezd te az értékeléseidet, grafikonjaidat, hogy azokat jobban átlásd.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-right">
+                <div id="phonetext_customUI" class="row customClickable" onclick="setImageVisibleJQERY('customUI')">
+                  <div class="col-3 feature-iconbar container d-flex">
+                    <i class="fas fa-ban fa-fw align-self-center"></i>
+                  </div>
+                  <div class="col-9 featureBar-padding">
+                    <h3><strong>Egyszerűsíts.</strong></h3>
+                    <p class="ip-text">Iskolátok, vagy általad nem használt oldalak kikapcsolása, az egyszerű
+                      navigációért.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-right">
+                <div id="phonetext_customHome" class="row customClickable" onclick="setImageVisibleJQERY('customHome')">
+                  <div class="col-3 feature-iconbar container d-flex">
+                    <i class="fas fa-home fa-fw align-self-center"></i>
+                  </div>
+                  <div class="col-9 featureBar-padding">
+                    <h3><strong>Gyorsíts.</strong></h3>
+                    <p class="ip-text">Válaszd ki te, mi jelenjen meg a főoldalon. Csak a szükséges adatok betöltését
+                      várd meg.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-left" class="col-lg-6 phoneBody">
+          <div class="phoneBtns">
+            <button id="platform_ios" onclick="changePlatform('ios')" type="button" class="btn btn-dark">
+              <i class="fa fa-apple fa-1x appleIcon" aria-hidden="true"></i>
+            </button>
+            <button id="platform_android" onclick="changePlatform('android')" type="button" class="btn">
+              <i class="fa fa-android fa-1x" aria-hidden="true"></i>
+            </button>
+          </div>
+          <img class="responsive" id="phone" src="img/ios/evaluations-black-v2.png" alt="Telefon">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="software" class="sm-dev-featuretextDisable solid-container">
+    <div data-aos="fade-up" class="featuretext">
+      <h1>Szoftver</h1>
+    </div>
+  </div>
+  <div class="solid-container">
+    <div class="container">
+      <div class="d-flex flex-row">
+        <div class="justify-content-start software-textbox">
+          <div class="img-code-textbox">
+            <h3 data-aos="fade-up"><strong>Visszajelzés</strong></h3>
+            <p data-aos="fade-up">Ez egy nem hivatalos ellenőrző alkalmazás, ami kompatibilis a magyarországi
+              KRÉTA-rendszerrel.
+              Az alkalmazást nem az eKréta Informatikai Zrt. fejlesztette, ezért az esetleges problémákkal, kérdésekkel
+              kapcsolatban
+              ne az ő ügyfélszolgálatukat keresd!</p>
+          </div>
+          <div class="img-code-textbox">
+            <h3 data-aos="fade-up"><strong>Miért készült az alkalmazás?</strong></h3>
+            <p data-aos="fade-up">Az elsődleges cél, hogy gyorsabb, megbízhatóbb, használhatóbb legyen. Jelenleg minden
+              általunk ismert,
+              megvalósítható funkció támogatott.
+              Amennyiben tudsz olyan dologról, amit a hivatalos alkalmazás tud, és az Arisztokréta nem, kérlek <a
+                onclick="scrl('contacts')">jelezd nekünk.</a>
+            </p>
+          </div>
+          <div class="img-code-textbox">
+            <h3 data-aos="fade-up"><strong>Adatkezelés</strong></h3>
+            <p data-aos="fade-up">A program személyes adatokat nem gyűjt és nem továbbít a fejlesztők felé. Az
+              adatkezelési tájékoztatót
+              <a href="https://arisztokreta.hu/privacy">ezen az oldalon</a>
+              olvashatod.
+              Mivel a személyes adatokat az eKRÉTA Informatikai Zrt. tárolja és kezeli, olvasd el az ő
+              <a href="https://tudasbazis.ekreta.hu/pages/viewpage.action?pageId=4064926">tájékoztatójukat</a> is.</p>
+          </div>
+        </div>
+        <div data-aos="fade-left" class="d-flex justify-content-end">
+          <img id="img-code" src="img/code.png">
+        </div>
+      </div>
+      <div data-aos="fade-up" class="software-textbox">
+        <h3><strong>Felhasználási feltételek</strong></h3>
+        <p>Ezt az alkalmazást a készítők és a közreműködők “ahogy van” adják közre, és minden nyílt
+          vagy burkolt
+          garanciajogot
+          visszautasítanak vele kapcsolatban, ideértve de nem kizárólagosan az eladhatóságra vagy az egy adott célra
+          való
+          alkalmazhatóságra vonatkozó garanciát. A készítők nem vonhatók felelősségre semmilyen, a szoftver
+          használatából eredő
+          esemény kapcsán, mely közvetlen, közvetett, véletlenszerű, különleges, példátlan vagy szükségszerű módon
+          bekövetkező
+          kárhoz vezet még akkor sem, ha a károsodás lehetősége előre látható volt.
+          A szoftver
+          <a href="https://github.com/Coware-Apps/ellenorzo/">nyílt forráskódú</a>
+          , a
+          <a href="https://github.com/Coware-Apps/ellenorzo/blob/master/LICENSE">GPLv3</a>
+          licenc alatt terjesztjük.
+        </p>
+        <h3><strong>Biztonságban vannak az adataim?</strong></h3>
+        <p>Az alkalmazás közvetlenül az e-napló szervereivel kommunikál titkosított kapcsolaton
+          keresztül, semmilyen más
+          szerverre
+          küld semmilyen személyes adatot. Ennek ellenére kizárólag saját felelősségre használható, hiszen a személyes
+          adatok
+          kezelője az iskola, illetve a tanár.</p>
+      </div>
+    </div>
+  </div>
+
+  <span id="contacts">
+    <div data-aos="fade-up">
+      <div class="featuretext" style="margin-bottom: 7s0px;">
+        <h1>Ötletem, kérdésem van, hova küldjem?</h1>
+      </div>
+    </div>
+  </span>
+  <div class="contact sm-dev-contact container">
+    <div class="row">
+      <div class="col-6 text-center" data-aos="fade-up">
+        <i class="fas fa-envelope sm-dev-icon pc-icon"></i>
+        <h3><strong>E-mail</strong></h3>
+        <p>Írj egy e-mailt:
+          <a href="cowareapps@gmail.com">cowareapps@gmail.com</a>
+        </p>
+      </div>
+      <div class="col-6 text-center" data-aos="fade-up">
+        <i class="fab fa-github sm-dev-icon pc-icon"></i>
+        <h3><strong>Github</strong></h3>
+        <p>
+          Nyiss egy issue-t <a href="https: //github.com/Coware-Apps/ellenorzo/issues">GitHub-on</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container pc-dev-container-footer sm-dev-container-footer d-flex">
+      <div class="row bottom-iconbar d-flex container">
         <div class="col-3">
-          <a href="https://github.com/Coware-Apps/ellenorzo">          
-          <i class="fab fa-github fa-2x"></i>
+          <a href="https://play.google.com/store/apps/details?id=hu.coware.ellenorzo">
+            <i class="fab fa-google-play fa-2x footer-icon" style="left: 0%;"></i>
           </a>
         </div>
+        <div class="col-3">
+          <a href="https://apps.apple.com/us/app/arisztokr%C3%A9ta-e-napl%C3%B3/id1502626784?ls=1">
+            <i class="fab fa-app-store-ios fa-2x footer-icon" tyle="left: 33%;"></i>
+          </a>
+        </div>
+        <div class="col-3">
+          <i class="fab fa-discord fa-2x footer-icon" tyle="left: 66%;"></i>
+        </div>
+        <div class="col-3">
+          <a href="https://github.com/Coware-Apps/ellenorzo">
+            <i class="fab fa-github fa-2x footer-icon" tyle="left: 100%;"></i>
+          </a>
+        </div>
+
+
+
       </div>
+      <small class="footer-small">
+        Made by: 3niXboi, Raedrim <br>
+        © 2020 Coware
+      </small>
     </div>
-  </div>
   </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -208,9 +392,10 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
-  
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/a6d91ed2fc.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
-
-<!--Made by Raedrim-->
+<!--Acesxl zyfobng wwj z vvkcpxngv iyzbbck XxamWqdb-->
 
 </html>
